@@ -14,8 +14,9 @@
 * Mysql 数据库
 
 ###系统界面截图
-* ![image](https://github.com/ButBueatiful/dotvim/raw/master/screenshots/vim-screenshot.jpg)
-
+* ![image](https://raw.githubusercontent.com/wangzijian777/contentManager/master/content/init/index.png)
+* ![image](https://raw.githubusercontent.com/wangzijian777/contentManager/master/content/init/list.png)
+* ![image](https://raw.githubusercontent.com/wangzijian777/contentManager/master/content/init/tree.png)
 
 ###如何运行
 * 拷贝init/content.xml到tomcat的conf目录
