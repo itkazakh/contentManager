@@ -14,3 +14,12 @@
 * Mysql 数据库
 
 ###系统界面截图
+* ![image](https://github.com/ButBueatiful/dotvim/raw/master/screenshots/vim-screenshot.jpg)
+
+
+###如何运行
+* 拷贝init/content.xml到tomcat的conf目录
+* 执行init/back.sql来创建基础数据
+* 修改src/resource/config/jdbc.properties来配置数据库信息
+* 用eclipse导入工程然后运行tomcat
+* 搞定
