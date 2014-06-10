@@ -1,4 +1,4 @@
-<a href="http://blog.csdn.net/three_man/" target="_blank">我的博客</a> | <a href="http://jq.qq.com/?_wv=1027&k=JEWVPw">点击链接加入群【成都程序员】</a>
+<a href="http://blog.csdn.net/three_man/" target="_blank">我的博客</a> | <a href="http://url.cn/JEWVPw">点击链接加入群【成都程序员】</a>
 
 ##介绍
 * contentManager是一个我工作早期挣外快为别人开发的网站后台管理程序，可以实现一些管理功能
