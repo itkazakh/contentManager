@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>Application Tag Library</short-name>
+	<uri>/WEB-INF/tlds/app.tld</uri>
+	<description>
+		This tag library contains functionality specific to the PICC
+		CLAIM Application.
+	</description>
+
+	<!-- 代码翻译 -->
+	<tag>
+		<name>codetag</name>
+		<tag-class>cn.com.picc.claim.tag.CodeTag</tag-class>
+		<attribute>
+			<name>codeType</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>代码类型</description>
+		</attribute>
+		<attribute>
+			<name>codeCode</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>代码值</description>
+		</attribute>
+		<attribute>
+			<name>language</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>语言</description>
+		</attribute>
+		<attribute>
+			<name>riskCode</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>险种代码</description>
+		</attribute>
+	</tag>
+	
+	<!-- 权限控制 -->
+	<tag>
+		<name>authorize</name>
+		<tag-class>
+			ins.framework.security.DBAuthorizeTag
+		</tag-class>
+		<attribute>
+			<name>res</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<description>资源名称</description>
+		</attribute>
+	</tag>
+
+</taglib>

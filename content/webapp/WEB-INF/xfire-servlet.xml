@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="urlMap">
+			<map>				
+				<entry key="/SaaPowerWebServices">
+					<ref bean="saaPowerWebService" />
+				</entry>
+				
+				<entry key="/MenuWebServices">
+					<ref bean="menuWebService" />
+				</entry>
+				
+				<entry key="/OAAuthService">
+					<ref bean="oAAuthService" />
+				</entry>
+				
+				<entry key="/IPService">
+					<ref bean="ipServiceConfig" />
+				</entry>
+			
+			</map>
+		</property>
+	</bean>
+	
+	
+	<bean id="saaPowerWebService"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter">
+		<property name="serviceFactory">
+			<ref bean="xfire.serviceFactory" />
+		</property>
+		<property name="xfire">
+			<ref bean="xfire" />
+		</property>
+		<property name="serviceBean">
+			<ref bean="saaPowerService" />
+		</property>
+		<property name="serviceClass">
+			<value>cn.com.sinosoft.saa.service.facade.SaaPowerService</value>
+		</property>
+	</bean>
+	<bean id="menuWebService"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter">
+		<property name="serviceFactory">
+			<ref bean="xfire.serviceFactory" />
+		</property>
+		<property name="xfire">
+			<ref bean="xfire" />
+		</property>
+		<property name="serviceBean">
+			<ref bean="menuService" />
+		</property>
+		<property name="serviceClass">
+			<value>ins.platform.menu.service.facade.MenuService</value>
+		</property>
+	</bean>
+	
+	<bean id="oAAuthService"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter">
+		<property name="serviceFactory">
+			<ref bean="xfire.serviceFactory" />
+		</property>
+		<property name="xfire">
+			<ref bean="xfire" />
+		</property>
+		<property name="serviceBean">
+			<ref bean="oAAuthWebService" />
+		</property>
+		<property name="serviceClass">
+			<value>cn.com.sinosoft.oa.service.facade.OAInterfServiceSoap</value>
+		</property>
+	</bean>
+	
+	<bean id="ipServiceConfig"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter">
+		<property name="serviceFactory">
+			<ref bean="xfire.serviceFactory" />
+		</property>
+		<property name="xfire">
+			<ref bean="xfire" />
+		</property>
+		<property name="serviceBean">
+			<ref bean="ipConfigService" />
+		</property>
+		<property name="serviceClass">
+			<value>cn.com.sinosoft.ipconfig.service.facade.IpConfigService</value>
+		</property>
+	</bean>
+</beans>
