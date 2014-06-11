@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+ul{ margin:0; padding:0; list-style-type:none;}
+body {
+	font-size:12px;
+	font-family: "ËÎÌו";
+}
+a {
+}
+
+img {
+	border: 0;
+}
+h1 {}
+
+
+#container {
+}
+#header ul { color:#fff; font-weight:bold;padding:15px 0 0 40px;}
+#header .r ul{ padding:0;}
+
+#timer{ color:#01465A; font-weight:bold;}
+#navigation dl dd{ color:#01465A;}
+
+#crash_menu h2{ font-size:12px;}

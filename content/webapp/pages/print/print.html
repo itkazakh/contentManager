@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>打印页面</title>
+<link rel="stylesheet" type="text/css" media="all" href="style/basic.css" />
+<link rel="alternate stylesheet" type="text/css" href="style/basic.css" title="basic" />
+<link rel="alternate stylesheet" type="text/css" href="style/print.css" title="print" />
+<script type="text/javascript" src="js/yahoo.js"></script>
+<script type="text/javascript" src="js/event.js" ></script>
+<script type="text/javascript" src="js/dom.js" ></script>
+<script type="text/javascript" src="js/logger.js"></script>
+<script type="text/javascript" src="js/treeview-debug.js" ></script>
+<script type="text/javascript" src="js/changestyle.js"></script>
+<script type="text/javascript" src="js/styleswitcher.js"></script>
+<script type="text/javascript" src="js/tree_data.js"></script>
+</HEAD>
+<BODY>
+<div id="container">
+  <div id="header">
+      <h1><span>打印页面</span></h1>
+  </div>
+  <div class="clearfix">
+  <div id="wrapper">
+    <div id="content">
+	<p>设置 Web 服务器
+若要运行 Web 应用程序，您需要 Web 服务器。Web 服务器是根据 Web 浏览器的请求提供文件服务的软件。Web 服务器有时也叫做 HTTP 服务器。常见 Web 服务器包括 Microsoft Internet Information Server (IIS)、Netscape Enterprise Server、Sun ONE Web Server 和 Apache HTTP Server。
+
+如果您没有使用虚拟主机服务，则选择一个 Web 服务器并在您的本地计算机或远程计算机上安装它。要开发 ColdFusion Web 应用程序的 Windows 用户可以使用 ColdFusion MX 7 应用程序服务器的开发人员版本提供的 Web 服务器，您可以免费安装并使用。有关更多信息，请参见安装 ColdFusion 应用程序服务器。
+
+其他 Windows 用户可以通过安装 IIS 在其本地计算机上运行 Web 服务器。该 Web 服务器可能已安装在系统上。请检查文件夹结构中是否包含一个 C:\Inetpub 或 D:\Inetpub 文件夹。IIS 在安装过程中将创建该文件夹。如果要安装 IIS，请参见“Dreamweaver 入门”中的安装 Web 服务器。
+
+ASP.NET 页仅使用一个 Web 服务器：Microsoft IIS 5 或更高版本。因为 IIS 5 是 Windows 2000 和 Windows XP Professional 操作系统提供的服务，所以您可以使用这两个版本的 Windows 来承载 ASP.NET 应用程序。但是，您可以在运行 Dreamweaver 的任何计算机（包括 Macintosh）上开发（而不是承载）ASP.NET 应用程序。
+
+如果您是 Macintosh 用户，则您可以使用虚拟主机服务或在远程计算机上安装所需的软件。还可以使用随操作系统一起安装的 Apache Web 服务器和 PHP 应用程序服务器在本地开发 PHP 站点。有关更多信息，请参见安装 PHP 应用程序服务器。
+
+有关安装和配置其它 Web 服务器的信息，请参见服务器供应商的文档或向您的系统管理员咨询。
+
+</p>
+<ul id="toggle">
+<li><a href="#" onclick="setActiveStyleSheet('print'); return false;">切换到打印样式</a></li>
+<li><a href="#" onclick="setActiveStyleSheet('basic'); return false;">切换到默认样式</a></li>
+</ul>
+	</div>
+  </div>
+  <div id="navigation">
+    <dl id="menu" class="dl_on">
+      <dt>tree</dt>
+      <dd><span>理赔管理</span>
+        <div class="tree_on" id="treediv0"> </div>
+      </dd>
+    </dl>
+  </div>
+</div>
+</div>
+</body>
+</html>

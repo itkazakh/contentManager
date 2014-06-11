@@ -1,0 +1,88 @@
+.clearfix:after{
+    content:"."; 
+    display:block; 
+    height:0; 
+    clear:both; 
+    visibility:hidden;
+}
+.clearfix{
+    display:inline-block;
+}
+.clear {clear:both;}
+ /* mac hide \*/
+    * html .clearfix{height: 1%;}
+      .clearfix{display: block;}
+ /* End hide */
+*{margin:0;padding:0;}
+body { text-align:center;}
+#container{ text-align: left; margin:0 auto; height:540px;}
+#wrapper{float:left;width:100%;}
+#content{ padding:0 0 0 3px;}
+#navigation{float:left;border-right:1px solid #0086AB}
+.alt_margin{margin-left:23px;}
+
+.default_width{width:178px;}
+.alt_width{width:23px;}
+
+#header{ height:60px;}
+#header .l,#header .m,#header,#header .r{ float:left; height:60px;}
+#header .l{ width:225px;}
+#header .m{ width:470px;}
+#header .r{ width:105px;}
+
+h1 span{ display:none;}
+#header ul{ height:60px;}
+#header .m ul {padding:15px 0 0 40px; height:45px;}
+#header .m ul li{ padding:5px 0 0;}
+#header .m ul li.second{ padding-left:10px;}
+#header .r ul li{ float:left; display: block; width:40px; text-align:center; position:relative;}
+#header .r ul li a{padding-top:45px;width:100%; height:100%; position:absolute; left:0; top:0;}
+
+.floder{ height:29px;width:169px; line-height:25px; padding-right:5px; padding-left:0px;}
+.floder_on{width:23px; height:91px; float:left;}
+#timer{padding-top:2px;float:left}
+#switch_on{ float:right; width:34px; height:21px; margin:2px 0; padding-left:18px;cursor:pointer;}
+#switch_off{float:left; width:23px; height:71px; cursor:pointer; text-align:center; padding-top:20px;}
+.on{ display:block;}
+.off{display:none;}
+
+
+#crash_menu{ padding:0 15px; line-height:25px;text-align:left;margin-left:-5px;}
+#systom_tip{ position:relative;}
+#systom_tip b{ width:30px; height:24px; display:block; float:left;text-align:center;}
+
+/*below define the scroll property, you can define the width accrodding your request=================*/
+#systom_tip #marqueebox1{ line-height:23px;padding-left:10px; height:23px; overflow:hidden;}
+
+
+/*below define the popup width and position, you can define the width accrodding your request=================*/
+.tip_popup{ position:absolute; left:35px; top:-25px;width:150px;text-align:center;}
+.tip_popup em{ display:block;}
+.tip_popup img{ background:transparent;float:right; display:block; margin:2px; cursor:pointer; }
+.tip_popup p{ padding:5px; line-height:150%;}
+#systom_tip {margin-left:-5px;text-align:left;}
+#datePadding {
+	padding-left:15px;
+}
+#displayMenu {
+	float:left;
+	margin-right:-1px;
+	cursor:pointer;
+}
+
+/*菜单样式 Start*/
+#container{ text-align: left; margin:0 auto; width:176px; height:100%;}
+
+#navigation{ width:176px;}
+#navigation dl{ padding-bottom:62px;}/*del height*/
+#navigation dl dt,#navigation dl dd{clear:both;}
+
+.on{ display:block;}
+.off{display:none;}
+.floder{ height:29px;line-height:25px;width:100%; float:left;text-align:center;}
+
+
+#navigation dl dd span{ display:block; line-height:22px; text-align:center; cursor:pointer;}
+.tree_on{ overflow:auto; height:182px; margin:0; display:block;}/*用js动太控制Menu高度*/
+#navigation dl dd .tree_off{display:none;}
+/*菜单样式 End*/

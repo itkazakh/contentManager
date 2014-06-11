@@ -1,0 +1,23 @@
+body {color: #000;background:#fff;}
+#wrapper{}
+#wrapper1{background:transparent url(../image/top_bg.jpg) no-repeat 0% 0%;}
+#wrapper2{background:transparent url(../image/bottom_bg.jpg) no-repeat 0% 100%;}
+.inner{background:transparent url(../image/form_bg.jpg) no-repeat 0 0;}
+
+fieldset{ border:none;}
+legend{}
+
+#form_item{}
+h3{background:transparent url(../image/h3_bg.gif) no-repeat 0 0;}
+
+
+#user_name,#password{border:1px solid #DD2212;}
+#user_name{ background:transparent  url(../image/name_bg.gif) no-repeat 0 0; }
+#password{ background:transparent  url(../image/password_bg.gif) no-repeat 0 0;}
+
+#Btn_logo{background:transparent  url(../image/Btn_logo.gif) no-repeat 0 0; border:none;}
+
+
+p.help span{background:transparent  url(../image/help.gif) no-repeat right 0; padding:0 20px;}
+
+p.copyright{ color:#FFF;}

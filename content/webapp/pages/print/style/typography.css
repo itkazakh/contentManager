@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+ul{ margin:0; padding:0; list-style-type:none;}
+body {
+	font-size:12px;
+	font-family: "ËÎÌו";
+}
+a {
+}
+
+img {
+	border: 0;
+}
+h1 {}
+
+
+#container {
+}
+
+
+#timer{ color:#01465A; font-weight:bold;}
+#navigation dl dd{ color:#01465A;}

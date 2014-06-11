@@ -1,0 +1,45 @@
+body {
+	color: #000;
+	background-color:#FFF;
+}
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+
+
+
+h1{}
+
+
+#navigation{overflow:hidden;border-right:1px solid #0086AB;border-left:1px solid #0086AB; background:#F0F7F0; url(../image/tree_bg.jpg) repeat-x; left top}
+
+
+#navigation dl{ height:480px; }
+.dl_on{}
+.dl_off{background-image: none;}
+.floder{background:TRANSPARENT url(../image/switch_bg.jpg) repeat-x left top; border-color:#C9CDCC; border-style:solid; border-width:1px 2px;}
+.floder_on{}
+#switch_on{background:TRANSPARENT url(../image/btn_switch.jpg) no-repeat left 2px;}
+#switch_off{background:TRANSPARENT url(../image/btn_switch_on.jpg) no-repeat left 2px;}
+#navigation dl dd{}
+
+#navigation .tree_on{
+scrollbar-3d-light-color:#7DDCF0;
+scrollbar-highlight-color:#7DDCF0;
+scrollbar-face-color:#C8EBF1; 
+scrollbar-arrow-color:#0088AD;
+scrollbar-shadow-color:#7DDCF0;
+scrollbar-dark-shadow-color:#7DDCF0;
+scrollbar-base-color:#C8EBF1;
+}
+
+#navigation .tree_on a{ color:#000;}
+
+#content ul#toggle{ padding:15px 0;}
+#content ul#toggle li{ line-height:150%;}
+#content ul#toggle li a{ color:#01465A; font-weight:bold; text-decoration:none;}

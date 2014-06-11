@@ -1,0 +1,16 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+body {
+	font-family: "宋体";
+    font-size:12px;
+}
+h3{ font-size:16px; font-family: "方正黑体简体";}
+
+p.help a{color:#000; font-size:14px; text-decoration:none; font-weight:bold;}
+p.help span a{ color:#f60;}
+
+p.copyright{ font-size:9px; font-family:Arial, Helvetica, sans-serif; font-weight:bold;}

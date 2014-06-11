@@ -1,0 +1,74 @@
+/* CSS Document */
+#yahoo-com {height:100%;}
+#bd {height:100%;}
+#yui-main {height:100%;}
+.yui-t1 {height:100%;}
+.yui-b {height:100%;background-color:#00CC99;}
+
+
+
+.mian_head{
+	height:50px;
+	background-image:url(../images/mian_head_bg.jpg);
+	background-repeat: repeat-x;
+}
+.mian_head ul{ LIST-STYLE-TYPE: none;DISPLAY:inline;}
+.mian_head li{ DISPLAY: block;FLOAT: left;height:50px;color:#3F6293;}
+.mian_head li.logo{
+	width:195px;
+	background-image: url(../images/logo_n2.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.mian_head li.name{
+	line-height: 50px;
+	background-image:url(../images/icon_user.gif);
+	background-repeat: no-repeat;
+	background-position: 1px;
+	padding-left:20px;
+	margin-left:12px;
+}
+.mian_head li.co{
+	line-height: 50px;
+	background-image:url(../images/icon_co.gif);
+	background-repeat: no-repeat;
+	background-position: 1px;
+	padding-left:20px;
+	margin-left:12px;
+}
+.mian_head li.exit{
+	line-height: 50px;
+	float:right;
+	padding: 0px 20px 0px 20px;
+}
+.menu{width:25px;height:100%;background-color:#66CCCC;}
+.menu li{width:25px;}
+.menu li.m1{
+	height: 66px;
+}
+.menu li.m2{
+	height: 90px;
+}
+.menu li.m3{
+	height: 66px;
+}
+.menu li.m4{
+	height: 90px;
+}
+
+
+.F_3F6293 {
+	color: #3F6293;
+}
+.F_3F6293 a:link {
+	color: #3F6293;
+	text-decoration: none;
+}
+.F_3F6293 a:visited {
+	color: #3F6293;
+	text-decoration: none;
+}
+.F_3F6293 a:hover {
+	color: #3F6293;
+	text-decoration: none;
+}

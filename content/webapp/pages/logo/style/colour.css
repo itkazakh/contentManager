@@ -1,0 +1,58 @@
+body {
+	color: #000;
+	background-color:#FFF;
+}
+a:link {
+}
+a:visited {
+}
+a:hover {
+}
+a:active {
+}
+
+
+
+h1{ height:60px;padding-left:5px; line-height:60px; background:transparent url(../image/h1.jpg) no-repeat left center;}
+h1 img{ border:none;}
+#header{ border-bottom:1px solid #0086AB;}
+#header .l{ background:TRANSPARENT url(../image/h_l.jpg) no-repeat LEFT TOP;}
+#header .m{ background:TRANSPARENT url(../image/h_m.jpg) no-repeat LEFT TOP;}
+#header .r{ background:TRANSPARENT url(../image/h_r.jpg) no-repeat LEFT TOP;}
+#header .m ul{ background:TRANSPARENT url(../image/icon1.jpg) no-repeat LEFT TOP;}
+#header .r ul li a{ color:#FFF;background:TRANSPARENT url(../image/icon2.jpg) no-repeat 4px TOP;}
+#header .r ul li a.second{ background-position:-42px top;}
+
+#navigation{overflow:hidden;}
+.default_width{border-right:1px solid #0086AB;border-left:1px solid #0086AB;background:#F0F7F0 url(../image/tree_bg.jpg) repeat-x; left top;}
+.alt_width{border-right:none;border-left:1px solid #0086AB;}
+.dl_on{background:TRANSPARENT url(../image/nav_bottom.jpg) no-repeat left bottom;}
+.dl_off{background-image: none;}
+.floder{background:TRANSPARENT url(../image/switch_bg.jpg) repeat-x left top; border-color:#C9CDCC; border-style:solid; border-width:1px 2px;}
+.floder_on{}
+#switch_on{background:TRANSPARENT url(../image/btn_switch.jpg) no-repeat left 2px;}
+#switch_off{background:TRANSPARENT url(../image/btn_switch_on.jpg) no-repeat left 2px;}
+#navigation dl dd{background:TRANSPARENT url(../image/item_bg.jpg) no-repeat left top; }
+
+#navigation .tree_on{
+scrollbar-3d-light-color:#7DDCF0;
+scrollbar-highlight-color:#7DDCF0;
+scrollbar-face-color:#C8EBF1; 
+scrollbar-arrow-color:#0088AD;
+scrollbar-shadow-color:#7DDCF0;
+scrollbar-dark-shadow-color:#7DDCF0;
+scrollbar-base-color:#C8EBF1;
+}
+#navigation .tree_on a{ color:#000;}
+
+
+#crash_menu{ color:#01465A;background: #FFF url(../image/crash_bg.jpg) top left repeat-x;border-bottom:1px solid #94D8E4;}/*hahahahah*/
+
+
+h2 span{color:#000;}
+#systom_tip{ color:#01465A;background:#fff url(../image/tip_bg.jpg) top left repeat-x;border-bottom:1px solid #94D8E4;}
+#systom_tip b{background:transparent url(../image/tip.gif) no-repeat 10px center; border-top:1px solid #fff;}
+#systom_tip #marqueebox1{ color:#01465A;background:transparent;border-top:1px solid #fff;border-bottom:1px solid #fff;}
+/*below define the popup color and position, you can define the width accrodding your request=================*/
+.tip_popup{border:1px solid #369; background:#fff;}
+.tip_popup em{background:#B1E3EB; border-bottom:1px solid #5FCCDC;}
