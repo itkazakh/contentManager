@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">
+	<bean id="epsCompanyService"
+		class="cn.com.expense.eps.sys.service.spring.EpsCompanyServiceSpringImpl">
+	</bean>
+	<bean id="epsUserService"
+		 class="cn.com.expense.eps.sys.service.spring.EpsUserServiceSpringImpl">
+	</bean>
+	<bean id="payWayService"
+		class="cn.com.expense.eps.sys.service.spring.PayWayServiceSpringImpl">
+	</bean>
+	<bean id="payWayTitleService"
+		class="cn.com.expense.eps.sys.service.spring.PayWayTitleServiceSpringImpl">
+	</bean>
+	<bean id="bankCodeService"
+		class="cn.com.expense.eps.sys.service.spring.BankCodeServiceSpringImpl">
+	</bean>
+	<bean id="bankAccountService"
+		class="cn.com.expense.eps.sys.service.spring.BankAccountServiceSpringImpl">
+	</bean>
+	<bean id="feeTypeService"
+		class="cn.com.expense.eps.sys.service.spring.FeeTypeServiceSpringImpl">
+	</bean>
+	<bean id="feeItemService"
+		class="cn.com.expense.eps.sys.service.spring.FeeItemServiceImpl">
+	</bean>
+	<bean id="articleTypeService"
+	    class="cn.com.expense.eps.sys.service.spring.ArticleTypeServiceSpringImpl">
+	</bean>
+	<bean id="centerArticleService"
+	    class="cn.com.expense.eps.sys.service.spring.CenterArticleServiceSpringImpl">
+	</bean>
+	<!-- codeType  Service -->
+	<bean id="codeTypeService"
+		class="cn.com.expense.eps.sys.service.spring.CodeTypeServiceSpringImpl">
+	</bean>
+	<!-- codeDefine Service -->
+	<bean id="codeDefineService"
+	    class="cn.com.expense.eps.sys.service.spring.CodeDefineServiceSpringImpl">
+	</bean>
+
+	<bean id="epsNumRuleService"
+	    class="cn.com.expense.eps.sys.service.spring.EpsNumRuleServiceSpringImpl">
+	</bean>
+	<bean id="epsNumMaxService"
+	    class="cn.com.expense.eps.sys.service.spring.EpsNumMaxServiceSpringImpl">
+	</bean>
+	
+		<!-- area  Service -->
+	<bean id="areaService"
+		class="cn.com.expense.eps.sys.service.spring.AreaServiceSpringImpl">
+	</bean>
+	<!-- city Service -->
+	<bean id="cityService"
+	    class="cn.com.expense.eps.sys.service.spring.CityServiceSpringImpl">
+	</bean>
+	<bean id="epsExchService"
+	    class="cn.com.expense.eps.common.spring.EpsExchServiceSpringImpl">
+	</bean>
+	<!-- FeeCar Service -->
+	<bean id="feeCarService" class="cn.com.expense.eps.sys.service.spring.FeeCarServiceSpringImpl"/>
+
+	
+	<bean id="epsUserDraftService" class="cn.com.expense.eps.sys.service.spring.EpsUserDraftServiceSpringImpl"/>
+
+	<!-- Currency Service -->
+	<bean id="currencyService" class="cn.com.expense.eps.sys.service.spring.CurrencyServiceSpringImpl" />
+	<!-- ExchRate Service -->
+	<bean id="exchRateService" class="cn.com.expense.eps.sys.service.spring.ExchRateServiceSpringImpl" />
+</beans>

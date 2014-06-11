@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">
+	<bean id="menuAction" scope="prototype"
+		class="ins.platform.menu.web.MenuAction">
+	</bean>
+	<bean id="saaUserAction" scope="prototype"
+		class="cn.com.sinosoft.saa.web.SaaUserAction">
+	</bean>
+	<bean id="saaUserPowerAction" scope="prototype"
+		class="cn.com.sinosoft.saa.web.SaaUserPowerAction">
+	</bean>
+	<bean id="cardTypeAction" scope="prototype"
+		class="cn.com.hy369.cardtype.web.CardTypeAction">
+	</bean>
+	<bean id="cardAction" scope="prototype"
+		class="cn.com.hy369.card.web.CardAction">
+	</bean>
+	<bean id="resourceTypeAction" scope="prototype"
+		class="cn.com.hy369.resourcetype.web.ResourceTypeAction">
+	</bean>
+	<bean id="resourceAction" scope="prototype"
+		class="cn.com.hy369.resource.web.ResourceAction">
+	</bean>
+	<bean id="jionInfoAction" scope="prototype"
+		class="cn.com.hy369.jion.web.JionInfoAction">
+	</bean>
+	<bean id="adInfoAction" scope="prototype"
+		class="cn.com.hy369.adinfo.web.AdInfoAction">
+	</bean>
+	<bean id="codeInputAction" scope="prototype"
+		class="cn.com.sinosoft.saa.web.CodeInputAction">
+	</bean>
+	<bean id="backUpAction" scope="prototype"
+		class="cn.com.hy369.common.web.BackUpAction">
+	</bean>
+</beans>

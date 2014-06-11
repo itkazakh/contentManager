@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition
+  xmlns=""  name="FcontractDefinition">
+  
+  
+   <start-state name="Start">
+		<transition name="StartToInput" to="Input" />
+   </start-state>
+   
+   <task-node name="Input">
+   		<task name="taskInput"></task>
+   		<transition name="InputToFork" to="Fork" ></transition>
+   		<transition name="InputToFM" to="FM"  >
+   		</transition>
+   		<event type="node-leave">
+  	 	<action name="processingHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>processingHandler</targetBean>
+         </action>
+   		</event>
+   		
+   </task-node>
+	
+		<fork name="Fork">
+		<script>
+	  		<variable name="transitionNames" access="write"></variable>
+	  		<expression>
+	  			String process_ = executionContext.getVariable("next_process");
+	  			System.err.println("next_process is " + process_);
+				String[] next_process_s = process_.split(",");			
+				System.err.println(next_process_s[0]);			
+				transitionNames = new ArrayList();			
+				for (int length = 0; next_process_s.length > length; length ++){
+					System.err.println("sub Process is" + next_process_s[length]);
+					transitionNames.add(next_process_s[length]);				
+				}
+	  		</expression>
+	  	</script>
+
+		<transition name="ForkToManager" to="Manager"></transition>
+		<transition name="ForkToManager2" to="Manager2"></transition>
+		<transition name="ForkToManager3" to="Manager3"></transition>
+		<transition name="ForkToOfficer" to="Officer"></transition>
+		<transition name="ForkToState" to="State"></transition>
+	</fork>
+	
+	<task-node name="Manager">
+		<task name="taskManager"></task>
+		<transition name="ManagerToJoin" to="Join"></transition>
+		<transition name="ManagerToRefuse" to="Refuse"  ></transition>
+		<transition name="ManagerToOfficer" to="Officer"  ></transition>
+	</task-node>
+	
+	<task-node name="Officer">
+		<task name="taskOfficer"></task>
+		<transition name="OfficerToJoin" to="Join" ></transition>
+		<transition name="OfficerToRefuse" to="Refuse"></transition>
+	</task-node>
+	
+	<task-node name="Manager2">
+		<task name="taskManager2"></task>
+		<transition name="Manager2ToJoin" to="Join" ></transition>
+		<transition name="Manager2ToRefuse" to="Refuse" ></transition>
+		<transition to="Officer2" name="Manager2ToOfficer2"></transition>
+	</task-node>
+	
+	<task-node name="Officer2">
+		<task name="taskOfficer2"></task>
+		<transition name="Officer2ToJoin" to="Join" ></transition>
+		<transition name="Officer2ToRefuse" to="Refuse"></transition>
+	</task-node>
+	
+	<task-node name="Manager3">
+		<task name="taskManager3"></task>
+		<transition name="Manager3ToJoin" to="Join" ></transition>
+		<transition name="Manager3ToRefuse" to="Refuse" ></transition>
+		<transition to="Officer3" name="Manager3ToOfficer3"></transition>
+	</task-node>
+	
+	<task-node name="Officer3">
+		<task name="taskOfficer3"></task>
+		<transition name="Officer3ToJoin" to="Join" ></transition>
+		<transition name="Officer3ToRefuse" to="Refuse" ></transition>
+	</task-node>
+	
+	<state name="State">
+		<event type="node-enter">
+  	 	<action name="stateAutoHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>stateAutoHandler</targetBean>
+         </action>
+   	</event>
+   	<transition name="StateToJoin" to="Join"></transition>
+	</state>
+	
+	<join name="Join">
+		<transition name="JoinToFM" to="FM"></transition>
+	</join>
+
+    <task-node name="FM">
+    <task name="taskFM"></task>
+  	    <transition name="FMToInput" to="Input">
+			<action name="returnCertiHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>returnCertiHandler</targetBean>
+         	</action>
+		</transition>
+		<transition to="Refuse" name="FMToRefuse" ></transition>
+		<transition to="ComplianceAssessor" name="FMToComplianceAssessor"></transition>
+		<transition to="P_FM" name="FMToP_FM"></transition>
+    </task-node>    
+        
+    <task-node name="CFO">
+    <task name="taskCFO"></task>
+    <transition name="CFOToEnd" to="End" >
+		<action name="auditPassToEndHanlder" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>auditPassToEndHanlder</targetBean>
+        </action>
+		</transition>
+		<transition name="CFOToRefuse" to="Refuse" ></transition>
+    </task-node>   
+
+	<task-node name="Refuse">
+		<task name="taskRefuse">
+			<event type="task-start">
+   			<action name="refuseHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+         		<factoryKey>jbpmConfiguration</factoryKey>
+           		<targetBean>refuseHandler</targetBean>
+        	 </action>
+   			</event>
+		</task>
+		<transition name="RefuseToEnd" to="End">
+		</transition>
+	</task-node>
+
+	<task-node name="ComplianceAssessor">
+		<task name="taskComplianceAssessor"></task>
+		<transition to="Refuse" name="ComplianceAssessorToRefuse"></transition>
+		<transition to="P_FM" name="ComplianceAssessorToP_FM"></transition>
+	</task-node>
+
+	<task-node name="P_FM">
+		<task name="taskP_FM"></task>
+		<transition to="CFO" name="P_FMToCFO"></transition>
+		<transition to="P_ComplianceAssessor" name="P_FMToP_ComplianceAssessor"></transition>
+		<transition to="Refuse" name="P_FMToRefuse"></transition>
+		<transition to="End" name="P_FMToEnd">
+			<action name="auditPassToEndHanlder" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>auditPassToEndHanlder</targetBean>
+        	</action>
+		</transition>
+	</task-node>
+
+	<task-node name="P_ComplianceAssessor">
+		<task name="taskP_ComplianceAssessor"></task>
+		<transition to="CFO" name="P_ComplianceAssessorToCFO"></transition>
+		<transition to="Refuse" name="P_ComplianceAssessorToRefuse"></transition>
+	</task-node> 
+
+	<end-state name="End">
+		
+	</end-state>
+	
+</process-definition>

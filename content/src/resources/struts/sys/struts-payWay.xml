@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="payWay" extends="struts-default" namespace="/payWay">
+		<action name="prepareFindPayWay" class="payWayAction" method="prepareFindPayWay">
+			<result name="success">/pages/eps/sys/code/payWay/PayWayList.jsp</result>
+		</action>
+		<action name="findPayWay" class="payWayAction" method="findPayWay">
+			<result name="success">/pages/eps/sys/code/payWay/PayWayList.jsp</result>
+		</action>
+		<action name="prepareAddPayWay" class="payWayAction" method="prepareAddPayWay">
+			<result name="success">/pages/eps/sys/code/payWay/PayWayEdit.jsp</result>
+		</action>
+		<action name="addPayWay" class="payWayAction" method="addPayWay">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+			<result name="input">/pages/eps/sys/code/payWay/PayWayEdit.jsp</result>
+		</action>
+		<action name="deletePayWay" class="payWayAction" method="deletePayWay">
+			<result name="success">/pages/eps/sys/code/payWay/PayWayList.jsp</result>
+		</action>
+		<action name="prepareUpdatePayWay" class="payWayAction" method="prepareUpdatePayWay">
+			<result name="success">/pages/eps/sys/code/payWay/PayWayEdit.jsp</result>
+		</action>
+		<action name="updatePayWay" class="payWayAction" method="updatePayWay">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+	</package>
+</struts>

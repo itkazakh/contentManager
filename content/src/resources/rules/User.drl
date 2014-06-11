@@ -1,0 +1,32 @@
+#created on: 2007-5-13
+package jBoss
+
+import com.sinosoft.helloworld.user.model.TUser;
+
+
+rule "user-001"
+	
+	when 
+		user:TUser(email==null) || TUser(email=="");
+	then 
+		user.setEmail(user.getUsername()+"@sinosoft.com.cn");
+		System.out.println("user-001-------------");	
+end
+
+rule "user-002"
+	
+	when 
+		user:TUser(monicker==null) || TUser(monicker=="");
+	then 
+		user.setMonicker(user.getUsername());
+		System.out.println("user-002-------------");	
+end
+
+rule "user-003"
+	
+	when 
+		user:TUser(id==null) || TUser(id!=null);
+	then 
+		user.setEmail(user.getUsername()+"@xxx.sinosoft.com.cn");
+		//System.out.println("user-003-------------");	
+end

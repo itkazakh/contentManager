@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="resource" extends="struts-default" namespace="/resource">
+		<action name="prepareQueryResource" class="resourceAction" method="prepareQueryResource">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceView.jsp</result>
+		</action>
+		<action name="queryResourceTree" class="resourceAction" method="queryResourceTree">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceTree.jsp</result>
+		</action>
+		<action name="queryResourceMenu" class="resourceAction" method="queryResourceMenu">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceQueryMenu.jsp</result>
+		</action>
+		<action name="prepareAddResource" class="resourceAction" method="prepareAddResource">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceEdit.jsp</result>
+		</action>
+		<action name="addResource" class="resourceAction" method="addResource">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+		<action name="resourceManager" class="resourceAction" method="resourceManager">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceManager.jsp</result>
+		</action>
+		<action name="prepareUpdateResource" class="resourceAction" method="prepareUpdateResource">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceEdit.jsp</result>
+		</action>
+		<action name="updateResource" class="resourceAction" method="updateResource">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+		<action name="addResourceHand" class="resourceAction" method="addResourceHand">
+			<result name="success">/pages/common/successInfo.jsp</result>
+		</action>
+		<action name="prepareQueryResourceReal" class="resourceAction" method="prepareQueryResourceReal">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceList.jsp</result>
+		</action>
+		<action name="queryResource" class="resourceAction" method="queryResource">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceList.jsp</result>
+		</action>
+		<action name="deleteResource" class="resourceAction" method="deleteResource">
+			<result name="success">/pages/hy369/resourceManager/resourceManager/ResourceList.jsp</result>
+		</action>
+	</package>
+</struts>

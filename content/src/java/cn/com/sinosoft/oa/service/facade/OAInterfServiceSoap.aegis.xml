@@ -1,0 +1,24 @@
+<mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xfire.codehaus.org/schemas/1.0/mapping.xsd">
+	<mapping>
+        <method name="findAllGrade">
+            <return-type componentType="cn.com.sinosoft.oa.vo.Grade" />
+        </method>
+        <method name="findSingleUserGrade">
+        	<parameter index="0" mappedName="userCode" />
+            <return-type componentType="cn.com.sinosoft.oa.vo.OAAuthor" />
+        </method>
+        <method name="findAllUserByGrade">
+        	<parameter index="0" mappedName="gradeId" />
+            <return-type componentType="cn.com.sinosoft.oa.vo.UserGrade" />
+        </method>
+        <method name="accreditAdminister">
+        	<parameter index="0" mappedName="userCode" />
+        	<parameter index="1" mappedName="authorCode" />
+            <parameter index="2" componentType="cn.com.sinosoft.oa.vo.OAAuthor" />
+        </method>
+        <method name="findProductionTree">
+            <return-type componentType="java.lang.String" />
+        </method>
+    </mapping>
+</mappings>

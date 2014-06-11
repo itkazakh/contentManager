@@ -1,0 +1,47 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+    <field name="articleID">
+    	<field-validator type="requiredstring">
+    		<message key="error.message"></message>
+    	</field-validator>
+    	<field-validator type="stringlength">
+    		<param name="minLength">1</param>
+    		<param name="maxLength">10</param>
+    		<message key="error.length10"></message>
+    	</field-validator>
+    </field>
+    
+     <field name="articleIDName">
+    	<field-validator type="requiredstring">
+    		<message key="error.message"></message>
+    	</field-validator>
+    	<field-validator type="stringlength">
+    		<param name="minLength">1</param>
+    		<param name="maxLength">30</param>
+    		<message key="error.length30"></message>
+    	</field-validator>
+    </field>
+    
+    <field name="fcode">
+    	<field-validator type="requiredstring">
+    		<message key="error.message"></message>
+    	</field-validator>
+    	<field-validator type="stringlength">
+    		<param name="minLength">1</param>
+    		<param name="maxLength">15</param>
+    		<message key="error.length15"></message>
+    	</field-validator>
+    </field>
+    
+        <field name="fname">
+    	<field-validator type="requiredstring">
+    		<message key="error.message"></message>
+    	</field-validator>
+    		<field-validator type="stringlength">
+    		<param name="minLength">1</param>
+    		<param name="maxLength">30</param>
+    		<message key="error.length30"></message>
+    	</field-validator>
+    </field>  
+</validators>

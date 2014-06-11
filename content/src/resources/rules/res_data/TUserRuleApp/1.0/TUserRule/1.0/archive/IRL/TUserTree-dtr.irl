@@ -1,0 +1,30 @@
+// begin DT UtiUserTree
+// -- begin rule 'UtiUserTree 0'
+rule TUserTree_0 {
+   property ilog.rules.dt = "TUserTree";
+   property status = "new";
+   property ilog.rules.group = "TUserTree";
+   when {
+      ins.helloworld.user.model.UtiUser() from user;
+      evaluate (((user.id.intValue() == 1)));
+   } then {
+      user.userName = "dawei";
+   }
+}
+
+// -- end rule 'TUserTree 0'
+// -- begin rule 'TUserTree 1'
+rule UtiUserTree_1 {
+   property ilog.rules.dt = "TUserTree";
+   property status = "new";
+   property ilog.rules.group = "TUserTree";
+   when {
+      ins.helloworld.user.model.UtiUser() from user;
+      evaluate (((user.id.intValue() == 2)));
+   } then {
+      user.userName = "haha";
+   }
+}
+
+// -- end rule 'UtiUserTree 1'
+// end DT UtiUserTree

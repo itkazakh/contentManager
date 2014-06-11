@@ -1,0 +1,51 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" "http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+    <field name="payWayCode">
+    	<field-validator type="requiredstring">
+    		<message key="errors.miss.payway.payWayCode"></message>
+    	</field-validator>
+    	<field-validator type="stringlength">
+    		<param name="minLength">1</param>
+    		<param name="maxLength">3</param>
+    		<message key="errors.miss.payway.payWayCodeLength"></message>
+    	</field-validator>
+    </field>
+     <field name="payWayCName">
+    	<field-validator type="requiredstring">
+    		<message key="errors.miss.payway.payWayName"></message>
+    	</field-validator>
+    </field>
+    <field name="permitCenterCode">
+    	<field-validator type="requiredstring">
+    		<message key="errors.miss.payway.permitCenterCode"></message>
+    	</field-validator>
+    	
+    	<field-validator type="requiredstring">
+    		<param name="minLength">1</param>
+    		<param name="maxLength">10</param>
+    		<message key="errors.miss.payway.permitCenterCodeLength"></message>
+    	</field-validator>
+    </field>
+    <field name="opPayWay">
+    	<field-validator type="requiredstring">
+    		<message key="errors.miss.payway.opPayWay"></message>
+    	</field-validator>
+    </field>
+    <field name="titleCode">
+    	<field-validator type="requiredstring">
+    		<message key="errors.miss.payway.titleCode"></message>
+    	</field-validator>
+    	
+    	<field-validator type="requiredstring">
+    		<param name="minLength">1</param>
+    		<param name="maxLength">20</param>
+    		<message key="errors.miss.payway.titleCodeLength"></message>
+    	</field-validator>
+    </field>
+    <field name="titleName">
+    	<field-validator type="requiredstring">
+    		<message key="errors.miss.payway.titleName"></message>
+    	</field-validator>
+    </field>
+</validators>

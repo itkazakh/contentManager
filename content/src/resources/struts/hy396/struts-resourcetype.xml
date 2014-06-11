@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="resourceType" extends="struts-default" namespace="/resourceType">
+		<action name="prepareQueryResourceType" class="resourceTypeAction" method="prepareQueryResourceType">
+			<result name="success">/pages/hy369/resourceManager/resourceTypeManager/ResourceTypeView.jsp</result>
+		</action>
+		<action name="queryResourceTypeTree" class="resourceTypeAction" method="queryResourceTypeTree">
+			<result name="success">/pages/hy369/resourceManager/resourceTypeManager/ResourceTypeTree.jsp</result>
+		</action>
+		<action name="queryResourceTypeMenu" class="resourceTypeAction" method="queryResourceTypeMenu">
+			<result name="success">/pages/hy369/resourceManager/resourceTypeManager/ResourceTypeQueryMenu.jsp</result>
+		</action>
+		<action name="prepareAddResourceType" class="resourceTypeAction" method="prepareAddResourceType">
+			<result name="success">/pages/hy369/resourceManager/resourceTypeManager/ResourceTypeEdit.jsp</result>
+		</action>
+		<action name="addResourceType" class="resourceTypeAction" method="addResourceType">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+		<action name="resourceTypeManager" class="resourceTypeAction" method="resourceTypeManager">
+			<result name="success">/pages/hy369/resourceManager/resourceTypeManager/ResourceTypeManager.jsp</result>
+		</action>
+		<action name="prepareUpdateResourceType" class="resourceTypeAction" method="prepareUpdateResourceType">
+			<result name="success">/pages/hy369/resourceManager/resourceTypeManager/ResourceTypeEdit.jsp</result>
+		</action>
+		<action name="updateResourceType" class="resourceTypeAction" method="updateResourceType">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+		<action name="deleteResourceType" class="resourceTypeAction" method="deleteResourceType">
+			<result name="success">/pages/common/deleteSuccess.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="card" extends="struts-default" namespace="/card">
+		<action name="prepareQueryCard" class="cardAction" method="prepareQueryCard">
+			<result name="success">/pages/hy369/cardManager/cardManager/CardList.jsp</result>
+		</action>
+		<action name="queryCard" class="cardAction" method="queryCard">
+			<result name="success">/pages/hy369/cardManager/cardManager/CardList.jsp</result>
+		</action>
+		<action name="prepareAddCard" class="cardAction" method="prepareAddCard">
+			<result name="success">/pages/hy369/cardManager/cardManager/CardAdd.jsp</result>
+		</action>
+		<action name="addCard" class="cardAction" method="addCard">
+			<result name="success">/pages/common/successInfo.jsp</result>
+		</action>
+		<action name="prepareUpdateCard" class="cardAction" method="prepareUpdateCard">
+			<result name="success">/pages/hy369/cardManager/cardManager/CardEdit.jsp</result>
+		</action>
+		<action name="updateCard" class="cardAction" method="updateCard">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+		<action name="deleteCard" class="cardAction" method="deleteCard">
+			<result name="success">/pages/hy369/cardManager/cardManager/CardList.jsp</result>
+		</action>
+		<action name="addCardHand" class="cardAction" method="addCardHand">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+	</package>
+</struts>

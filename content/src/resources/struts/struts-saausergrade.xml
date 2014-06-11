@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="saaUserGrade" extends="struts-default" namespace="/saaUserGrade">
+		<action name="prepareQueryUser" class="saaUserGradeAction" method="prepareQueryUser">
+			<result name="success">/pages/userGrade/userQuery.jsp</result>
+		</action>
+		<action name="prepareQueryAgentUser" class="saaUserGradeAction" method="prepareQueryAgentUser">
+			<result name="success">/pages/agentUserGrade/userQuery.jsp</result>
+		</action>
+		<action name="prepareUpdateUserGrade" class="saaUserGradeAction"
+			method="prepareUpdateUserGrade">
+			<result name="success">
+				/pages/userGrade/userGradeEdit.jsp
+			</result>
+		</action>
+		<action name="updateUserGrade" class="saaUserGradeAction"
+			method="updateUserGrade">
+			<result name="success">
+				/pages/userGrade/editSuccessOther.jsp
+			</result>
+		</action>
+		<action name="prepareUpdateUserGradePower" class="saaUserGradeAction"
+		method="prepareUpdateUserGradePower">
+		<result name="success">
+			/pages/userGrade/UserGradePowerConfig.jsp
+		</result>
+		</action>
+		<action name="prepareUpdateAgentUserGradePower" class="saaUserGradeAction"
+		method="prepareUpdateUserGradePower">
+		<result name="success">
+			/pages/agentUserGrade/UserGradePowerConfig.jsp
+		</result>
+		</action>
+		<action name="initUserGradeList" class="saaUserGradeAction"
+		method="initUserGradeList">
+		<result name="success">
+			/pages/userGrade/userGradeResult.jsp
+		</result>
+		</action>
+		<action name="initAgentUserGradeList" class="saaUserGradeAction"
+		method="initUserGradeList">
+		<result name="success">
+			/pages/agentUserGrade/userGradeResult.jsp
+		</result>
+		</action>
+		<action name="viewUserGrade" class="saaUserGradeAction"
+		method="viewUserGrade">
+		<result name="success">
+			/pages/userGrade/userGradeView.jsp
+		</result>
+		</action>
+		<action name="viewAgentUserGrade" class="saaUserGradeAction"
+		method="viewUserGrade">
+		<result name="success">
+			/pages/agentUserGrade/userGradeView.jsp
+		</result>
+		</action>
+		<action name="prepareUpdateUserServicePower" class="saaUserGradeAction" 
+		method="prepareUpdateUserServicePower">
+		<result name="success">
+			/pages/userGrade/userServicePowerEdit.jsp
+		</result>
+		</action>
+		<action name="updateUserServicePower" class="saaUserGradeAction"
+		method="updateUserServicePower">
+			<result name="success">
+				/pages/userGrade/editSuccessOther.jsp
+			</result>
+		</action>
+		
+		<action name="preGradeTaskCodeBySys" class="saaUserGradeAction"
+			method="preGradeTaskCodeBySys">
+			<result name="success">/pages/userGrade/tasksView.jsp</result>
+		</action>
+		<action name="viewUserGradePower" class="saaUserGradeAction"
+			method="viewUserGradePower">
+			<result name="success">/pages/userGrade/userGradePower.jsp</result>
+		</action>
+		
+		<action name="viewAgentUserGradePower" class="saaUserGradeAction"
+			method="viewAgentUserGradePower">
+			<result name="success">/pages/userGrade/userGradePower.jsp</result>
+		</action>
+	</package>
+</struts>

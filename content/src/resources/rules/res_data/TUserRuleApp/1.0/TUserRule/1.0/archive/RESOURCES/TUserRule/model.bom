@@ -1,0 +1,25 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/UtiUserRule/helloworld"
+property uuid "_VWNwgMPsEduPiulfJYUrBw"
+package ins.helloworld.user.model;
+
+
+public class UtiUser
+        extends java.io.Serializable
+{
+    public java.lang.String answer;
+    public java.lang.String email;
+    public java.lang.Integer id;
+    public java.lang.String isdeleted;
+    public java.util.Date logintime;
+    public java.lang.String monicker;
+    public java.lang.String password;
+    public java.lang.String qq;
+    public java.lang.String question;
+    public java.util.Date regtime;
+    public java.lang.Integer score;
+    public java.lang.String userName;
+    public UtiUser();
+}
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="true">
+	<!-- company Action-->
+	<bean id="epsCompanyAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.EpsCompanyAction">
+	</bean> 
+	<bean id="payWayAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.PayWayAction">
+	</bean>
+	<!-- employee Action -->
+	<bean id="epsUserAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.EpsUserAction">
+	</bean>
+	<bean id="feeTypeAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.FeeTypeAction">
+	</bean>
+		<bean id="feeItemAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.FeeItemAction">
+	</bean>
+		<bean id="articleTypeAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.ArticleTypeAction">
+	</bean> 
+		<bean id="centerArticleAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.CenterArticleAction">
+	</bean> 
+
+	<!-- CodeType Action  -->
+	<bean id="codeTypeAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.CodeTypeAction">
+	</bean>
+	 <!-- CodeDefine Action  -->
+	<bean id="codeDefineAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.CodeDefineAction">
+	</bean>
+	<bean id="epsNumRuleAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.EpsNumRuleAction">
+	</bean>
+	<!-- bankSet -->
+	<bean id="bankSetAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.BankSetAction">
+	</bean>
+	<bean id="bankAccountSetAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.BankAccountSetAction">
+	</bean>
+	<!-- Area Action -->
+	<bean id="areaAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.AreaAction">
+	</bean>
+	<!-- City Action -->
+	<bean id="cityAction" scope="prototype"
+		class="cn.com.expense.eps.sys.web.CityAction">
+	</bean>
+	<!-- FeeCar Action -->
+    <bean id="feeCarAction" scope="prototype" class="cn.com.expense.eps.sys.web.FeeCarAction"/>
+    <!-- Currency Action -->
+    <bean id="currencyAction" scope="prototype" class="cn.com.expense.eps.sys.web.CurrencyAction" />
+      <!-- ExchRate Action -->
+    <bean id="exchRateAction" scope="prototype" class="cn.com.expense.eps.sys.web.ExchRateAction" />
+    <!-- userDraft Action -->
+     <bean id="userDraftAction" scope="prototype" class="cn.com.expense.eps.sys.web.EpsUserDraftAction" />
+</beans>

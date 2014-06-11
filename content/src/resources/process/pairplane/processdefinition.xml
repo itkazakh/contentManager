@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition  xmlns=""  name="PairplaneDefinition">
+
+
+	<start-state name="Start">
+		<transition to="Input"></transition>
+	</start-state>
+
+
+	<task-node name="Input">
+		<task name="taskInput"></task>
+			<event type="node-leave">
+  	 	   <action name="processingHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	 <factoryKey>jbpmConfiguration</factoryKey>
+             <targetBean>processingHandler</targetBean>
+           </action>
+   		</event>
+		<transition to="Cashier" name="InputToCashier"></transition>
+	</task-node>
+
+	<task-node name="Cashier">
+		<task name="taskCashier"></task>
+		<transition to="CFO" name="CashierToCFO"></transition>
+	</task-node>
+
+	<task-node name="CFO">
+		<task name="taskCFO"></task>
+		<transition to="End" name="CFOToEnd">
+			<action name="auditPassToEndHanlder" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>auditPassToEndHanlder</targetBean>
+      </action>
+		</transition>
+		<transition to="Refuse" name="CFOToRefuse"></transition>
+	</task-node>
+
+	<task-node name="Refuse">
+			<event type="task-start">
+   			<action name="refuseHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+         		<factoryKey>jbpmConfiguration</factoryKey>
+           		<targetBean>refuseHandler</targetBean>
+        	 </action>
+   		</event>
+		<transition to="End" name="RefuseToEnd"></transition>
+	</task-node>
+
+
+	<end-state name="End"></end-state>
+
+
+</process-definition>

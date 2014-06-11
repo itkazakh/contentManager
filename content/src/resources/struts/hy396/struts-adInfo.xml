@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="adInfo" extends="struts-default" namespace="/adInfo">
+		<action name="prepareQueryAdInfo" class="adInfoAction" method="prepareQueryAdInfo">
+			<result name="success">/pages/hy369/resourceManager/adInfoManager/AdInfoList.jsp</result>
+		</action>
+		<action name="queryAdInfo" class="adInfoAction" method="queryAdInfo">
+			<result name="success">/pages/hy369/resourceManager/adInfoManager/AdInfoList.jsp</result>
+		</action>
+		<action name="prepareAddAdInfo" class="adInfoAction" method="prepareAddAdInfo">
+			<result name="success">/pages/hy369/resourceManager/adInfoManager/AdInfoEdit.jsp</result>
+		</action>
+		<action name="addAdInfo" class="adInfoAction" method="addAdInfo">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+		<action name="prepareUpdateAdInfo" class="adInfoAction" method="prepareUpdateAdInfo">
+			<result name="success">/pages/hy369/resourceManager/adInfoManager/AdInfoEdit.jsp</result>
+		</action>
+		<action name="updateAdInfo" class="adInfoAction" method="updateAdInfo">
+			<result name="success">/pages/common/addSuccess.jsp</result>
+		</action>
+		<action name="deleteAdInfo" class="adInfoAction" method="deleteAdInfo">
+			<result name="success">/pages/hy369/resourceManager/adInfoManager/AdInfoList.jsp</result>
+		</action>
+	</package>
+</struts>

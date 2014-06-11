@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="saaTask" extends="struts-default" namespace="/saaTask">
+			<action name="task" class="saaTaskAction" method="task">
+			<result name="findTask">
+				/pages/task/findTask.jsp
+			</result>
+			<result name="addTask">
+				/pages/task/updateTask.jsp
+			</result>
+			<result name="updateTask">
+				/pages/task/updateTask.jsp
+			</result>
+			<result name="showTask">
+				/pages/task/showTask.jsp
+			</result>
+		</action>
+		<action name="prepareFindTask" class="saaTaskAction"
+			method="prepareFindTask">
+			<result name="findTask">/pages/task/findTask.jsp</result>
+			<result name="addTask">/pages/task/addTask.jsp</result>
+			<result name="updateTask">
+				/pages/task/updateTask.jsp
+			</result>
+			<result name="success">/pages/task/findTask.jsp</result>
+		</action>
+		<action name="addTask" class="saaTaskAction" method="addTask">
+			<result name="success">
+				/pages/task/addTaskSuccess.jsp
+			</result>
+			<result name="error">/pages/task/prepareFindTask.jsp</result>
+			<result name="input">/pages/task/findTask.jsp</result>
+		</action>
+			<action name="deleteTask" class="saaTaskAction"
+			method="deleteTask">
+			<result name="success">/pages/task/findTask.jsp</result>
+		</action>
+		<action name="findTask" class="saaTaskAction" method="findTask">
+		</action>
+
+		<action name="updateTask" class="saaTaskAction"
+			method="updateTask">
+			<result name="success">/pages/task/updateTaskSuccess.jsp</result>
+			<result name="input"></result>
+		</action>
+		<action name="showTask" class="saaTaskAction" method="showTask">
+			<result name="success">/pages/task/showTask.jsp</result>
+		</action>
+	</package>
+</struts>

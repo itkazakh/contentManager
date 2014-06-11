@@ -1,0 +1,12 @@
+import com.sinosoft.helloworld.user.model.*;
+
+ruleset TUserRule
+{
+  inout ins.helloworld.user.model.UtiUser user = null;
+};
+
+
+propertydefinition
+{
+  ilog.rules.PackageHierarchy ilog.rules.package;
+}

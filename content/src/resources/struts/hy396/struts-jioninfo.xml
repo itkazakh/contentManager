@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="jionInfo" extends="struts-default" namespace="/jionInfo">
+		<action name="prepareQueryJionInfo" class="jionInfoAction" method="prepareQueryJionInfo">
+			<result name="success">/pages/hy369/systemManager/jionInfoManager/JionInfoList.jsp</result>
+		</action>
+		<action name="queryJionInfo" class="jionInfoAction" method="queryJionInfo">
+			<result name="success">/pages/hy369/systemManager/jionInfoManager/JionInfoList.jsp</result>
+		</action>
+		<action name="deleteJionInfo" class="jionInfoAction" method="deleteJionInfo">
+			<result name="success">/pages/hy369/systemManager/jionInfoManager/JionInfoList.jsp</result>
+		</action>
+	</package>
+</struts>

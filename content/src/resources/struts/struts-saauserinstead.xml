@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="saaUserInstead" extends="struts-default" namespace="/saaUserInstead">
+		<action name="prepareQueryUser" class="saaUserInsteadAction"
+			method="prepareQueryUser">
+			<result name="success">
+				/pages/userInstead/userQuery.jsp
+			</result>
+		</action>
+		<action name="prepareInsteadUser" class="saaUserInsteadAction" method="prepareInsteadUser">
+			<result name="success">
+				/pages/userInstead/userInsteadEdit.jsp
+			</result>
+		</action>
+		<action name="insteadUser" class="saaUserInsteadAction" method="insteadUser">
+			<result name="success">
+				/pages/userInstead/editSuccess.jsp
+			</result>
+		</action>
+		<action name="updateUserInstead" class="saaUserInsteadAction" method="updateUserInstead">
+			<result name="success">
+				/pages/userInstead/editSuccess.jsp
+			</result>
+		</action>
+		<action name="checkUserInstead" class="saaUserInsteadAction" method="checkUserInstead">
+		<result name="editUserInstead">
+				/pages/userInstead/userInsteadEdit.jsp
+		</result>
+		<result name="viewUserInstead">
+			/pages/userInstead/userInsteadView.jsp
+		</result>
+		</action>		
+	</package>
+</struts>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName" default-lazy-init="false">
+
+	<!-- ============Components Service Area================ -->
+	<!-- Image -->
+	<import resource="classpath*:spring/components/applicationContext-image.xml" />
+
+	<!-- Mail -->
+	<import resource="classpath:spring/components/applicationContext-mail.xml" />
+
+	<!-- Rule -->
+	<import resource="classpath:spring/components/applicationContext-rule.xml" />
+
+	<!--
+		Quartz <import
+		resource="classpath:spring/components/applicationContext-quartz.xml"
+		/>
+	-->
+	<!-- ============Application Service Area================ -->
+
+	<bean id="menuService" class="ins.platform.menu.service.spring.ExpenseMenuServiceImpl">
+	</bean>
+	<!-- 中银样式的菜单服务-->
+	<bean id="bocinsMenuService"
+		class="ins.platform.menu.service.spring.BocinsMenuServiceSpringImpl">
+	</bean>
+	<bean id="saaPowerService"
+		class="cn.com.sinosoft.saa.service.spring.SaaPowerServiceSpringImpl">
+	</bean>
+	<bean id="saaPowerHelpService"
+		class="cn.com.sinosoft.saa.service.spring.SaaPowerHelpServiceSpringImpl">
+	</bean>
+
+	<bean id="saaProductLineService"
+		class="cn.com.sinosoft.saa.service.spring.SaaProductLineServiceSpringImpl">
+	</bean>
+	<bean id="saaInsuranceService"
+		class="cn.com.sinosoft.saa.service.spring.SaaInsuranceServiceSpringImpl">
+	</bean>
+	<bean id="saaInsuranceCategoryService"
+		class="cn.com.sinosoft.saa.service.spring.SaaInsuranceCategoryServiceSpringImpl">
+	</bean>
+	<bean id="ipConfigHelpService"
+		class="cn.com.sinosoft.ipconfig.service.spring.IpConfigHelpServiceSpringImpl">
+	</bean>
+	<bean id="ipConfigService"
+		class="cn.com.sinosoft.ipconfig.service.spring.IpConfigServiceSpringImpl">
+	</bean>
+	<bean id="cardTypeService"
+		class="cn.com.hy369.cardtype.service.spring.CardTypeServiceSpringImpl">
+	</bean>
+	<bean id="cardService"
+		class="cn.com.hy369.card.service.spring.CardServiceSpringImpl">
+	</bean>
+	<bean id="resourceTypeService"
+		class="cn.com.hy369.resourcetype.service.spring.ResourceTypeServiceSpringImpl">
+	</bean>
+	<bean id="resourceService"
+		class="cn.com.hy369.resource.service.spring.ResourceServiceSpringImpl">
+	</bean>
+	<bean id="interfaceService"
+		class="cn.com.hy369.servlet.service.spring.InterfaceServiceSpringImpl">
+	</bean>
+	<bean id="jionInfoService"
+		class="cn.com.hy369.jion.service.spring.JionInfoServiceSpringImpl">
+	</bean>
+	<bean id="adInfoService"
+		class="cn.com.hy369.adinfo.service.spring.AdInfoServiceSpringImpl">
+	</bean>
+	<bean id="noCodeService"
+		class="cn.com.hy369.noCode.service.spring.NoCodeServiceImpl">
+	</bean>
+</beans>

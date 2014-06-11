@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<process-definition
+  xmlns=""  name="PassetDefinition">
+  
+  
+   <start-state name="Start">
+		<transition name="StartToInput" to="Input" />
+   </start-state>
+   
+   <task-node name="Input">
+   		<task name="taskInput"></task>
+   		<transition name="InputToFork" to="Fork" ></transition>
+   		<event type="node-leave">
+  	 	<action name="processingHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>processingHandler</targetBean>
+         </action>
+   		</event>
+   </task-node>
+	
+		<fork name="Fork">
+		<script>
+	  		<variable name="transitionNames" access="write"></variable>
+	  		<expression>
+	  			String process_ = executionContext.getVariable("next_process");
+	  			System.err.println("next_process is " + process_);
+				String[] next_process_s = process_.split(",");			
+				System.err.println(next_process_s[0]);			
+				transitionNames = new ArrayList();			
+				for (int length = 0; next_process_s.length > length; length ++){
+					System.err.println("sub Process is" + next_process_s[length]);
+					transitionNames.add(next_process_s[length]);				
+				}
+	  		</expression>
+	  	</script>
+		<transition name="ForkToManager" to="Manager"></transition>
+		<transition name="ForkToManager2" to="Manager2"></transition>
+		<transition name="ForkToManager3" to="Manager3"></transition>
+		<transition name="ForkToState" to="State"></transition>
+	</fork>
+	
+	<task-node name="Manager">
+		<task name="taskManager"></task>
+		<transition name="ManagerToJoin" to="Join"></transition>
+		<transition name="ManagerToRefuse" to="Refuse"  ></transition>
+	</task-node>
+	
+	<task-node name="Manager2">
+		<task name="taskManager2"></task>
+		<transition name="Manager2ToJoin" to="Join" ></transition>
+		<transition name="Manager2ToRefuse" to="Refuse" ></transition>
+	</task-node>
+	
+	<task-node name="Manager3">
+		<task name="taskManager3"></task>
+		<transition name="Manager3ToJoin" to="Join" ></transition>
+		<transition name="Manager3ToRefuse" to="Refuse" ></transition>
+	</task-node>
+	
+	<state name="State">
+		<event type="node-enter">
+  	 	<action name="stateAutoHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>stateAutoHandler</targetBean>
+         </action>
+   	</event>
+   	<transition name="StateToJoin" to="Join"></transition>
+	</state>
+	
+	<join name="Join">
+		<transition name="JoinToITManager" to="ITManager"></transition>
+	</join>
+
+    <task-node name="ITManager">
+    <task name="taskITManager"></task>
+		<transition name="ITManagerToCIO" to="CIO"></transition>
+		<transition to="End" name="ITManagerToEnd">
+			<action name="auditPassTOEndHanlder" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>auditPassToEndHanlder</targetBean>
+      		</action>
+		</transition>
+		<transition to="Refuse" name="ITManagerToRefuse"></transition>
+	</task-node>
+        
+    <task-node name="CIO">
+    <task name="taskCIO"></task>
+    <transition name="CIOToGM" to="GM"></transition>
+		<transition name="CIOToRefuse" to="Refuse"></transition>
+		<transition to="End" name="CIOToEnd">
+			<action name="auditPassTOEndHanlder" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>auditPassToEndHanlder</targetBean>
+      		</action>
+		</transition>
+    </task-node>    
+        
+    <task-node name="GM">
+		<task name="taskGM"></task>
+		<transition name="GMToEnd" to="End">
+			<action name="auditPassTOEndHanlder" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+          	<factoryKey>jbpmConfiguration</factoryKey>
+            <targetBean>auditPassToEndHanlder</targetBean>
+      		</action>
+		</transition>
+		<transition name="GMToRefuse" to="Refuse"></transition>
+	</task-node> 
+	
+	<task-node name="Refuse">
+		<task name="taskRefuse">
+			<event type="task-start">
+   			<action name="refuseHandler" class="org.springmodules.workflow.jbpm31.JbpmHandlerProxy" config-type="bean">
+         		<factoryKey>jbpmConfiguration</factoryKey>
+           		<targetBean>refuseHandler</targetBean>
+        	 </action>
+   			</event>
+		</task>
+		
+		<transition name="RefuseToEnd" to="End">
+		</transition>
+	</task-node> 
+
+	<end-state name="End">
+		
+	</end-state>
+	
+</process-definition>

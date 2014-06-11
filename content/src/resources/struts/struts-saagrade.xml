@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="saaGrade" extends="struts-default" namespace="/saaGrade">
+		<action name="gradeConfig" class="saaGradeAction" method="config">
+			<result name="success">/pages/grade/gradeConfig.jsp</result>
+		</action>				
+		<action name="initGradeList" class="saaGradeAction" method="initGradeList">
+			<result name="success">/pages/grade/gradeResult.jsp</result>
+		</action>
+		<action name="updateGrade" class="saaGradeAction"
+			method="updateGrade">
+			<result name="success">/pages/grade/editSuccess.jsp</result>
+		</action>
+		<action name="viewGrade" class="saaGradeAction"
+			method="viewGrade">
+			<result name="success">/pages/grade/gradeEdit.jsp</result>
+		</action>
+		<action name="insertGrade" class="saaGradeAction"
+			method="insertGrade">
+			<result name="success">/pages/grade/addSuccess.jsp</result>
+		</action>
+		<action name="prepareInsertGrade" class="saaGradeAction"
+			method="prepareInsertGrade">
+			<result name="success">/pages/grade/gradeEdit.jsp</result>
+		</action>
+		<action name="prepareUpdateGrade" class="saaGradeAction"
+			method="prepareUpdateGrade">
+			<result name="success">/pages/grade/gradeEdit.jsp</result>
+		</action>
+		<action name="prepareCopyGrade" class="saaGradeAction"
+			method="prepareCopyGrade">
+			<result name="success">/pages/grade/gradeEdit.jsp</result>
+		</action>
+		<action name="deleteGrade" class="saaGradeAction"
+			method="deleteGrade">
+			<result name="success">/pages/grade/editSuccess.jsp</result>
+		</action>
+		
+		<action name="preGradeTaskCodeBySys" class="saaGradeAction"
+			method="preGradeTaskCodeBySys">
+			<result name="success">/pages/grade/tasksView.jsp</result>
+		</action>
+	</package>
+</struts>
